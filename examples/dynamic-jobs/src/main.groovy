@@ -23,7 +23,7 @@ ArrayList searchYamlFiles(String dirPath) {
 // get the current working directory
 def cwd = hudson.model.Executor.currentExecutor().getCurrentWorkspace().absolutize()
 
-pipeline_file_list  = searchYamlFiles(cwd)
+pipeline_file_list  = searchYamlFiles(cwd.toString())
 
 for (current_pipeline in pipeline_file_list){
 
